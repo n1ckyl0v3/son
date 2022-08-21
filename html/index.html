@@ -13,18 +13,84 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body ng-app = "myApp">
-    <div class="container">
-        <div class="header">
-            <nav>
-                <a href="" class="logo">
-                    <img src="../public/logo.png" alt="">
-                </a>
-                <ul class="main-menu">
-                    <li><a class="linkheader" href="#">Products</a></li>
-                    <li><a class="linkheader" href="#">Help Center</a></li>
-                    <li><a class="linkheader" href="#">Explore</a></li>
-                </ul>
-            </nav>
+    <div id="container">
+        <div id ="header">
+            <div id="header1">
+                <nav class="nav">
+                    <a href="" id="logo">
+                        <img src="../public/logo.png" alt="">
+                    </a>
+                    <ul id="main-menu">
+                        <li><a class="linkheader" href="#">Products</a>
+                            <ul class="sub-menu">
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                            </ul>
+                        </li> 
+                        <li><a class="linkheader" href="#">Help Center</a></li>
+                        <li><a class="linkheader" href="#">Explore</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header2">
+                <div class="slide" style="height:40rem; position:relative"> <img class="slide1" src="../public/image/quat-tran-hunter/quattran5canh2trang.jpg" alt="">
+                    <div class="control prev"><i class='bx bx-chevron-left'></i></div>
+                    <div class=" control next"><i class='bx bx-chevron-right'></i></div>
+                    <h2></h2>
+            </div>
+            <div class="list-img">
+               <div> <img src="../public/image/quat-tran-hunter/3canhden.jpg" alt=""></div>
+               <div><img src="../public/image/quat-tran-hunter/quattran5canh2trang.jpg" alt=""></div>
+               <div> <img src="../public/image/quat-tran-hunter/quattran5canhnau.jpg" alt=""></div>
+               <div><img src="../public/image/quat-tran-hunter/quattran5canhtrang.jpg" alt=""></div>
+            </div></div>
+                    </div>
+                
+                </div>
+            <script>
+                var slide = document.querySelector('.slide1');
+                var prev = document.querySelector('.prev');
+                var next = document.querySelector('.next');
+                var list_img = document.querySelectorAll('.list-img img');
+            
+            var currentindex = 0;   
+            
+            prev.addEventListener('click', e=>{
+                if(currentindex == 0){
+                    currentindex = list_img.length - 1;
+                }else{
+                    currentindex--;
+                }
+                //slide.src = list_img[currentindex].getAttribute('src');
+               prev.addEventListener('click', e=>{
+                    slide.style.opacity = '0';
+                    setTimeout(() => {
+                        slide.src = list_img[currentindex].getAttribute('src');
+                    
+            slide.style.opacity = '1';
+                    }, 300)
+                })
+            })
+            next.addEventListener('click', e=>{
+                if(currentindex == list_img.length - 1){
+                    currentindex = 0;
+                }else{
+                    currentindex++;
+                }
+                //slide.src = list_img[currentindex].getAttribute('src');
+               next.addEventListener('click', e=>{
+                    slide.style.opacity = '0';
+                    setTimeout(() => {
+                        slide.src = list_img[currentindex].getAttribute('src');
+            slide.style.opacity = '1';
+                    }, 300)
+                })
+            })
+            
+            </script>
+            <!-- <script src="../js/product.js"></script> -->
+            
         </div>
     </div>
 </body>
