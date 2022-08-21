@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
     <link rel="stylesheet" href="../css/product.css">
     <script src="https://kit.fontawesome.com/58d1abb6f4.js" crossorigin="anonymous"></script>
-
+ <script src="../js/product.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body ng-app = "myApp">
@@ -28,8 +28,18 @@
                                 <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
                             </ul>
                         </li> 
-                        <li><a class="linkheader" href="#">Help Center</a></li>
-                        <li><a class="linkheader" href="#">Explore</a></li>
+                        <li><a class="linkheader" href="#">Help Center</a>
+                            <ul class="sub-menu">
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                            </ul></li>
+                        <li><a class="linkheader" href="#">Explore</a>
+                            <ul class="sub-menu">
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                            </ul></li>
                     </ul>
                 </nav>
             </div>
@@ -40,7 +50,7 @@
                     <h2></h2>
             </div>
             <div class="list-img">
-               <div> <img src="../public/image/quat-tran-hunter/3canhden.jpg" alt=""></div>
+               <div> <img class="anh1" src="../public/image/quat-tran-hunter/3canhden.jpg" alt=""></div>
                <div><img src="../public/image/quat-tran-hunter/quattran5canh2trang.jpg" alt=""></div>
                <div> <img src="../public/image/quat-tran-hunter/quattran5canhnau.jpg" alt=""></div>
                <div><img src="../public/image/quat-tran-hunter/quattran5canhtrang.jpg" alt=""></div>
