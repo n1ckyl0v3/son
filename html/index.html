@@ -11,6 +11,7 @@
     <script src="https://kit.fontawesome.com/58d1abb6f4.js" crossorigin="anonymous"></script>
  <script src="../js/product.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body ng-app = "myApp">
     <div id="container">
@@ -56,52 +57,51 @@
                <div><img src="../public/image/quat-tran-hunter/quattran5canhtrang.jpg" alt=""></div>
             </div></div>
                     </div>
-                
                 </div>
-            <script>
-                var slide = document.querySelector('.slide1');
-                var prev = document.querySelector('.prev');
-                var next = document.querySelector('.next');
-                var list_img = document.querySelectorAll('.list-img img');
-            
-            var currentindex = 0;   
-            
-            prev.addEventListener('click', e=>{
-                if(currentindex == 0){
-                    currentindex = list_img.length - 1;
-                }else{
-                    currentindex--;
-                }
-                //slide.src = list_img[currentindex].getAttribute('src');
-               prev.addEventListener('click', e=>{
-                    slide.style.opacity = '0';
-                    setTimeout(() => {
-                        slide.src = list_img[currentindex].getAttribute('src');
-                    
-            slide.style.opacity = '1';
-                    }, 300)
-                })
-            })
-            next.addEventListener('click', e=>{
-                if(currentindex == list_img.length - 1){
-                    currentindex = 0;
-                }else{
-                    currentindex++;
-                }
-                //slide.src = list_img[currentindex].getAttribute('src');
-               next.addEventListener('click', e=>{
-                    slide.style.opacity = '0';
-                    setTimeout(() => {
-                        slide.src = list_img[currentindex].getAttribute('src');
-            slide.style.opacity = '1';
-                    }, 300)
-                })
-            })
-            
-            </script>
-            <!-- <script src="../js/product.js"></script> -->
-            
+                <script>
+                    var slide = document.querySelector('.slide1');
+                    var prev = document.querySelector('.prev');
+                    var next = document.querySelector('.next');
+                    var list_img = document.querySelectorAll('.list-img img');
+                    var currentindex = 0;   
+                    prev.addEventListener('click', e=>{
+                        if(currentindex == 0){
+                            currentindex = list_img.length - 1;
+                        }else{
+                            currentindex--;
+                        }
+                        //slide.src = list_img[currentindex].getAttribute('src');
+                       prev.addEventListener('click', e=>{
+                            slide.style.opacity = '0';
+                            setTimeout(() => {
+                                slide.src = list_img[currentindex].getAttribute('src');
+                            
+                    slide.style.opacity = '1';
+                            }, 300)
+                        })
+                    })
+                    next.addEventListener('click', e=>{
+                        if(currentindex == list_img.length - 1){
+                            currentindex = 0;
+                        }else{
+                            currentindex++;
+                        }
+                        //slide.src = list_img[currentindex].getAttribute('src');
+                       next.addEventListener('click', e=>{
+                            slide.style.opacity = '0';
+                            setTimeout(() => {
+                                slide.src = list_img[currentindex].getAttribute('src');
+                    slide.style.opacity = '1';
+                            }, 300)
+                        })
+                    })
+                </script>
+                <!-- <script src="../js/product.js"></script> -->
+    
+            </div>
         </div>
-    </div>
+    
+            
+    
 </body>
 </html>
