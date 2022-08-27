@@ -120,9 +120,11 @@ a.linkheader:after{
   }
   .prev{
     left: 10px;
+    transition: 2s ease;
   }
   .next{
     right: 10px;
+    transition: 2s ease;
   }
   /* .list-img img{
     display: none;
@@ -193,5 +195,12 @@ a.linkheader:after{
   font-family: 'Open Sans';
   word-wrap: break-word;
  }
-  
-    
+
+.fade{
+  animation-name: fade;
+  animation-duration: 1s;
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
