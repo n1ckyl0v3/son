@@ -76,9 +76,7 @@ a,a:visited,a:hover,a:active{
     text-decoration:none;
     
   }
-  a:hover{
-    color:white;
-  }
+
   a.linkheader:after{
     content: "";
     transition:0.5s all ease;
@@ -90,14 +88,14 @@ a,a:visited,a:hover,a:active{
   a.linkheader:after{
     bottom: -0.01rem;
   }
-  a.linkheader:after{
+a.linkheader:after{
     height:5px;
     height:0.15rem;
     width:0;
     background:white;
   }
   
-  a.linkheader:after{
+   a.linkheader:after{
     left:50%;
     -webkit-transform:translateX(-50%);
             transform:translateX(-50%);
@@ -110,13 +108,13 @@ a,a:visited,a:hover,a:active{
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: 100% -4px;
   }
   .control{
     position: absolute;
-    top: 50%;
+    top: 40%;
     font-size: 70px;
-    color: grey;
+    color: White;
     transform: translateY(-50%);
     cursor: pointer;
   }
@@ -126,9 +124,9 @@ a,a:visited,a:hover,a:active{
   .next{
     right: 10px;
   }
-  .list-img img{
+  /* .list-img img{
     display: none;
-  }
+  } */
   
   /* hieu ung chuyen slide */
   .slide1{
@@ -136,7 +134,64 @@ a,a:visited,a:hover,a:active{
     z-index: 1;
   }
   
+  .list-img{
+    position: relative;
+    height: 35rem;
+  }
+  .slide{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  .text{
+    top: 75%;
+    right: 50%;
+    color: rgb(247, 248, 244);
+    font-size: 1.25rem;
+    transform: translateX(50%) translateY(-50%);
+    border: 1px rgb(248, 248, 248) solid;
+    padding: 2px;
+    width: 8rem;
+    height: 2.5rem;
+    padding-top: 5px;
+    text-align: center;
+    font-weight: 6px;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-family: 'Open Sans';
+  }
   /* sub menu */
- 
+ .text:hover{
+  border: 1px solid rgb(170, 166, 166);
+ }
+ .text2{
+  top: 45%;
+    right: 55%;
+    color: rgb(247, 248, 244);
+    font-size: 6rem;
+    transform: translateX(50%) translateY(-50%);
+    position: absolute;
+    width: 40rem;
+    height: 2.5rem;
+    padding-top: 5px;
+    text-align: center;
+    font-weight: 6px;
+    font-family: 'Open Sans';
+    word-wrap: break-word;
+ } 
+ .text3{
+  top: 64%;
+  right: 50%;
+  color: rgb(247, 248, 244);
+  font-size: 1rem;
+  transform: translateX(50%) translateY(-50%);
+  position: absolute;
+  width:30rem;
+  height: 2.5rem;
+  padding-top: 5px;
+  text-align: center;
+  font-weight: 6px;
+  font-family: 'Open Sans';
+  word-wrap: break-word;
+ }
   
     

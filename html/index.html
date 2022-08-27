@@ -44,57 +44,41 @@
                     </ul>
                 </nav>
             </div>
-            <div class="header2">
-                <div class="slide" style="height:40rem; position:relative"> <img class="slide1" src="../public/image/quat-tran-hunter/quattran5canh2trang.jpg" alt="">
-                    <div class="control prev"><i class='bx bx-chevron-left'></i></div>
-                    <div class=" control next"><i class='bx bx-chevron-right'></i></div>
-                    <h2></h2>
-            </div>
             <div class="list-img">
-               <div> <img class="anh1" src="../public/image/quat-tran-hunter/3canhden.jpg" alt=""></div>
-               <div><img src="../public/image/quat-tran-hunter/quattran5canh2trang.jpg" alt=""></div>
-               <div> <img src="../public/image/quat-tran-hunter/quattran5canhnau.jpg" alt=""></div>
-               <div><img src="../public/image/quat-tran-hunter/quattran5canhtrang.jpg" alt=""></div>
-            </div></div>
+ 
+   <div class="slide"> <img class="anh1" src="../public/841791-Interior-Design-Living-room-Sofa.jpg" alt=""> <a style="position: absolute; transition: 0.5s;  " href="#" class="text">Learn More</a> <div class="text2">fdsfdsfdsfd</div> <div class="text3">asdshadhdffssssssssssssssssssssssssssssssssssss
+    fdddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</div></div>
+               <div class="slide"><img style="object-position: 100% 30%;" src="../public/762342-Interior-Design-Living-room-Carpet-Fireplace-Armchair.jpg" alt=""><a style="position: absolute; transition: 0.5s;" href="#" class="text">anh 2</a><div class="text2">dsadsads</div> </div>
+               <div class="slide"> <img style=" object-position: 100% 5%;" src="../public/826576-Interior-Design-Living-room-Sofa-Carpet-Chandelier.jpg" alt=""><a style="position: absolute;transition: 0.5s;" href="#" class="text">anh 3</a><div class="text2">dsadsads</div></div>
+               <div class="slide"><img style="object-position: 100% 15%;" src="../public/780925-Interior-Design-Living-room-Carpet-Armchair-Table.jpg" alt=""><a style="position: absolute;transition: 0.5s;" href="#" class="text">anh 4</a><div class="text2">dsadsads</div></div>
+            </div> </div>
+            <div class="control prev" onclick="plusSlides(-1)"><i class='bx bx-chevron-left'></i></div>
+            <div class=" control next" onclick="plusSlides(1)"><i class='bx bx-chevron-right'></i></div>
+        </div>
                     </div>
                 </div>
                 <script>
-                    var slide = document.querySelector('.slide1');
-                    var prev = document.querySelector('.prev');
-                    var next = document.querySelector('.next');
-                    var list_img = document.querySelectorAll('.list-img img');
-                    var currentindex = 0;   
-                    prev.addEventListener('click', e=>{
-                        if(currentindex == 0){
-                            currentindex = list_img.length - 1;
-                        }else{
-                            currentindex--;
-                        }
-                        //slide.src = list_img[currentindex].getAttribute('src');
-                       prev.addEventListener('click', e=>{
-                            slide.style.opacity = '0';
-                            setTimeout(() => {
-                                slide.src = list_img[currentindex].getAttribute('src');
-                            
-                    slide.style.opacity = '1';
-                            }, 300)
-                        })
-                    })
-                    next.addEventListener('click', e=>{
-                        if(currentindex == list_img.length - 1){
-                            currentindex = 0;
-                        }else{
-                            currentindex++;
-                        }
-                        //slide.src = list_img[currentindex].getAttribute('src');
-                       next.addEventListener('click', e=>{
-                            slide.style.opacity = '0';
-                            setTimeout(() => {
-                                slide.src = list_img[currentindex].getAttribute('src');
-                    slide.style.opacity = '1';
-                            }, 300)
-                        })
-                    })
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+                
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+                    
+                    function showSlides(n) {
+                      let i;
+                      let slides = document.getElementsByClassName("slide");
+                 
+                      if (n > slides.length) {slideIndex = 1}    
+                      if (n < 1) {slideIndex = slides.length}
+                      for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                      }
+                      
+                      
+                      slides[slideIndex-1].style.display = "block";  
+                     
+                    }
                 </script>
                 <!-- <script src="../js/product.js"></script> -->
     
