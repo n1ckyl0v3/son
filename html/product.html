@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        /* header menu logo */
+        #header1{
+            background-color: #53284f;
+            height: 80px;
+        }
+        .nav{
+            max-width: 1650px;
+            margin: 0px auto;
+        }
+        nav{
+            display: flex;
+        }
+        #main-menu{
+            display: flex;
+            list-style: none;
+            margin-left: 2.5rem;
+        
+        }
+        .nav #logo img{
+            /* logo */
+            max-width: 200px;
+            height: auto;
+        }
+        #logo{
+            padding: 5px 0px;
+            margin-top: 0.6rem;
+        }
+        #main-menu li {
+            position: relative;
+        }
+        #main-menu li a{
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 25px 25px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 600;
+            height: 3.5rem;
+        } 
+        /* sub menu */
+        #main-menu ul.sub-menu{
+            position: absolute;
+            background-color: #ebeaea;
+            padding: 15px 0px;
+            list-style: none;
+            width: 12rem;
+            border-radius: 5px;
+            opacity: 80%;
+            left: 1.45rem;
+            display: none;
+            margin-top: 1rem;
+            z-index: 2;
+        }
+        #main-menu ul.sub-menu a{
+            padding: 10px 30px;
+        }
+        #main-menu li:hover ul.sub-menu{
+            display: block;
+          
+        }
+        /* hover gach duoi */
+        a,a:visited,a:hover,a:active{
+            -webkit-backface-visibility:hidden;
+                    backface-visibility:hidden;
+            position:relative;
+            transition:0.5s color ease;
+            text-decoration:none;
+          }
+          a.linkheader:after{
+            content: "";
+            transition:0.5s all ease;
+            -webkit-backface-visibility:hidden;
+                    backface-visibility:hidden;
+            position:absolute;
+          }
+        
+          a.linkheader:after{
+            bottom: -0.01rem;
+          }
+        a.linkheader:after{
+            height:5px;
+            height:0.15rem;
+            width:0;
+            background:white;
+          }
+          
+           a.linkheader:after{
+            left:50%;
+            -webkit-transform:translateX(-50%);
+                    transform:translateX(-50%);
+          }
+          a.linkheader:hover:after{
+            width:60%;
+          }
+
+          /*img*/
+          .img{
+            height: 35rem;
+            position: relative;
+          }
+          .img img{
+            position: absolute;
+            object-fit: cover;
+            object-position: center;
+            height: 100%;
+            width: 100%;
+          }
+          .text a{
+            position: absolute;
+            text-decoration: none;
+            color: white;
+            font-family: 'Open Sans';
+            -webkit-transition: color 0.3s ease 0s, background-color 0.3s ease 0s, border-color 0.3s ease 0s;
+            left: 47%;
+            top: 58%;
+          }
+          .text a:hover{
+            color: #53284f;
+          }
+          /*list product*/
+          .list-product-title{
+            width: 100%;
+            text-transform: uppercase;
+            margin-left: 5px;
+            margin-right: 5px;
+        
+        }
+        .list-product-subtitle{
+            width: 100%;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        
+        /*product card*/
+        .card-product{
+            width: 100%;
+            margin-left: 5px;
+            margin-right: 5px;
+            overflow: hidden;	
+        }
+    </style>
+</head>
+<body>
+    <div id="container1">
+        <div id ="header">
+            <div id="header1">
+                <nav class="nav">
+                    <a href="" id="logo">
+                        <img src="../public/logo.png" alt="">
+                    </a>
+                    <ul id="main-menu">
+                        <li><a class="linkheader" href="#">Products</a>
+                            <ul class="sub-menu">
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                            </ul>
+                        </li> 
+                        <li><a class="linkheader" href="#">Help Center</a>
+                            <ul class="sub-menu">
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                            </ul></li>
+                        <li><a class="linkheader" href="#">Explore</a>
+                            <ul class="sub-menu">
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                            </ul></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="img">
+                <img src="../public/bia.png" alt="">
+                <div class="text"><a href="./index.html">Home</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-5">
+            <h2 class="list-product-title">New product</h2>
+            <div class="list-product-subtitle">
+                <p>List product description</p>
+            </div>
+            <div class="product-group">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <div class="card card-product mb-3">
+                          <img class="card-img-top" src="http://via.placeholder.com/280x280" alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">Product</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <div class="card card-product mb-3">
+                          <img class="card-img-top" src="http://via.placeholder.com/280x280" alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">Product</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <div class="card card-product mb-3">
+                          <img class="card-img-top" src="http://via.placeholder.com/280x280" alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">Product</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <div class="card card-product mb-3">
+                          <img class="card-img-top" src="http://via.placeholder.com/280x280" alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">Product</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                          </div>
+                        </div>
+                    </div>				
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
