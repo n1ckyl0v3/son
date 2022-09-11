@@ -3,7 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+html{
+  font-size: 100%;
+}
 /* header menu logo */
 #header1{
     background-color: #53284f;

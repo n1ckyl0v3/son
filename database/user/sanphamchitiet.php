@@ -21,6 +21,7 @@ $type = mysqli_query($conn, "SELECT * FROM type INNER JOIN product on type.typei
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href='./sanphamchitiet.css' rel='stylesheet'>
+    <link href="./sourcecss.css" rel="stylesheet">
 </head>
 <body>
 <div id="container1">
@@ -54,6 +55,8 @@ $type = mysqli_query($conn, "SELECT * FROM type INNER JOIN product on type.typei
                 </nav>
             </div>
             <h2 id="titlepr">Chi tiết sản phẩm</h2>
+
+<!-- start -->
 <?php 
                         while($row = mysqli_fetch_assoc($result)){
                             // echo '<pre>';
@@ -61,92 +64,115 @@ $type = mysqli_query($conn, "SELECT * FROM type INNER JOIN product on type.typei
                             // var_dump($result);
                                 foreach($result as $key => $value){
                                     ?>
-            <div style="display: flex">
-            <div>
+            <div class="infoproduct">
+            <div class="img-des">
 <!-- ẢNH ĐẦU TIÊN                 -->
-            <img src="../admin/uploads/<?php echo $value['image'] ?>" alt="" width="500" class="img">
+            <img class="img-main" src="../admin/uploads/<?php echo $value['image'] ?>" alt="" width="500" class="img">
             </div>
-<!-- ẢNH MÔ TẢ-->
-            <div class="" style="margin-left:70px">
-                          <?php while($anh = mysqli_fetch_all($img)){
-                                   foreach($img as $key => $hi){
-                                    ?>
-                                    <img src="../admin/uploadsmota/<?php echo $hi['image'] ?>" alt="" style="width: 300px;" >                                                                                         
-                           <?php } ?>
-                           <?php } ?>
-            </div>
-            </div>
+
+          <div class="description">
+<!-- NAME -->
+            <!-- <h1 id="name">quat</h1> -->
+         <div class="name"><?php echo '<h2 style="font-size: 40px">'. $value['name'] . '</h2>'?></div>
 <!-- BRAND -->
-            <div style="display: flex"> 
-                <label for="">Brand:</label>
-                <div> <?php echo $value['brand'] ?></div>
+            <div id="brand"> 
+                <label for="">Brand:</label> <?php echo $value['brand']?>
             </div>
 <!-- category             -->
-            <div style="display: flex"> 
-                <label for="">CATEGORY</label>
-              
-               
-                    <div><?php while(($row['categoryid'] == 1)){ ?>
-                        <?php  echo '<div style="font-size:30px">' .'quạt trần'.'</div>';
+            <div class="category"> 
+                <label for="">Category:</label> <?php while(($row['categoryid'] == 1)){ ?>
+                        <?php  echo 'quạt trần';
+                        // var_dump( $row['categoryid'] );
                                       break;
                                      ?>
                   <?php  } ?>      
                   <?php while(($row['categoryid'] == 2)){ ?>
-                        <?php  echo '<div style="font-size:30px">' .'quạt đứng'.'</div>';
+                        <?php  echo 'quạt đứng';
+                       
                                       break;
                                      ?>
                   <?php  } ?>
                   <?php while(($row['categoryid'] == 3)){ ?>
-                        <?php  echo '<div style="font-size:30px">' .'quạt âm trần'.'</div>';
+                        <?php  echo 'quạt âm trần';
                                       break;
                                      ?>
                   <?php  } ?>   
                   <?php while(($row['categoryid'] == 4)){ ?>
-                        <?php  echo '<div style="font-size:30px">' .'quạt cầm tay'.'</div>'; 
+                        <?php  echo 'quạt cầm tay'; 
                                       break;
                                      ?>
                   <?php  } ?>   
                  </div>
                  
                  
-            </div>
+      
 <!-- TYPE -->
-<div style="display: flex"> 
-                <label for="">TYPE</label>
-               <?php
+<div id="type"> 
+                <label for="">Type:</label>
+            <?php
                while($cate =  mysqli_fetch_all($category)){
                foreach($category as $key => $categoryy){ ?>
-                    <div><?php while(($row['typeid'] == 5)){ ?>
-                        <?php  echo '<div style="font-size:30px">' .'hiện đại'.'</div>';
+                 <?php while(($row['typeid'] == 5)){ ?>
+                        <?php  echo 'hiện đại';
                                       break;
                                      ?>
                   <?php  } ?>      
                   <?php while(($row['typeid'] == 6)){ ?>
-                        <?php  echo '<div style="font-size:30px">' .'cổ điển'.'</div>';
+                        <?php  echo 'cổ điển';
                                       break;
                                      ?>
                   <?php  } ?>
                   <?php while(($row['typeid'] == 7)){ ?>
-                        <?php  echo '<div style="font-size:30px">' .'tương lai'.'</div>';
+                        <?php  echo 'tương lai';
                                       break;
                                      ?>
                   <?php  } ?>   
                   <?php while(($row['typeid'] == 8)){ ?>
-                        <?php  echo '<div style="font-size:30px">' .'tối giản'.'</div>'; 
+                        <?php  echo 'tối giản'; 
                                       break;
                                      ?>
                   <?php  } ?>   
                  </div>
                  
                  <?php break; } ?>
-            </div>
+  
             <?php break; } ?>
+ <!-- GIA -->
+<div id="price"><label for="">Price:</label> <?php echo $value['price'] ?></div>
+
+<!-- ẢNH MÔ TẢ-->
+<div class="lst_img-des">
+                          <?php while($anh = mysqli_fetch_all($img)){
+                                   foreach($img as $key => $hi){
+                                    ?>
+                                 
+                                    <img class='lst_img-des1' src="../admin/uploadsmota/<?php echo $hi['image'] ?>" alt=""  >                                                                                         
+                           <?php } ?>
+                           <?php } ?>
+            </div>
+     
+<!-- ADD TO CART -->
+<button class="add-cart">ADD TO CART</button>
 <!-- MÔ TẢ -->
-<div style="display: flex; display: inline-block"> 
-                <label for="">Mô tả:</label>
-                <div> <?php echo $value['ProductDescription'] ?></div>
+<div class="mo-ta" > 
+        <?php echo $value['ProductDescription'] ?>
             </div>
             <?php } ?>
             <?php  } ?>
+            </div>
+
+    <!-- js -->
+    <script src="./sanphamchitiet.js"></script>
+    <script>
+// var img_main = document.querySelector(".img-main");
+// // console.log(img_main);
+// var lst_img = document.querySelectorAll(".lst_img-des1");
+// // console.log(lst_img);
+
+// lst_img.addEventListener('click', function(){
+//         alert('Bạn đã đúp chuột vào thẻ input này');
+//     });
+
+    </script>
 </body>
 </html>

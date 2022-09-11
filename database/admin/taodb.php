@@ -21,6 +21,7 @@ $sql = "CREATE TABLE IF NOT EXISTS product(
     image varchar(100) not null
     )";
 $result = $conn_db->query($sql);
+
 if ($result) {
     echo "Table created successfully";
 } else {
@@ -221,4 +222,5 @@ if ($result) {
 //     var_dump($conn_db);
 //   echo "Error creating FOREIGN KEY: " . $conn_db->connect_error;
 //  }
+
 ?>

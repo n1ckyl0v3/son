@@ -3,7 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+html{
+  font-size: 100%;
+}
 /* header menu logo */
 #header1{
     background-color: #53284f;
@@ -64,40 +66,7 @@ nav{
     display: block;
   
 }
-/* hover gach duoi */
-a,a:visited,a:hover,a:active{
-    -webkit-backface-visibility:hidden;
-            backface-visibility:hidden;
-    position:relative;
-    transition:0.5s color ease;
-    text-decoration:none;
-  }
-  a.linkheader:after{
-    content: "";
-    transition:0.5s all ease;
-    -webkit-backface-visibility:hidden;
-            backface-visibility:hidden;
-    position:absolute;
-  }
 
-  a.linkheader:after{
-    bottom: -0.01rem;
-  }
-a.linkheader:after{
-    height:5px;
-    height:0.15rem;
-    width:0;
-    background:white;
-  }
-  
-   a.linkheader:after{
-    left:50%;
-    -webkit-transform:translateX(-50%);
-            transform:translateX(-50%);
-  }
-  a.linkheader:hover:after{
-    width:60%;
-  }
 
   h2#titlepr{
     margin-top: 1rem;
@@ -108,3 +77,104 @@ a.linkheader:after{
     width: 96.5%;
     padding-bottom: 1rem;
   }
+/* 
+  Phan thong tin san pham */
+
+  .infoproduct{
+    display: flex;
+    flex-wrap: wrap;
+  position: relative;
+  }
+  .img-des{
+    border: 1px black solid;
+    width: 470px;
+    height: 500px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 32px;
+   
+  }
+  .img-des img{
+    object-fit: fill;
+    /* object-position: ; */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* phan mo ta */
+  .description{
+    /* border: 1px solid black;  */
+    height: 500px;
+    margin-top: 10px;
+    width: 500px;
+    padding: 0px 30px;
+    margin-left: 6px;
+  }
+
+/* brand*/
+div#brand {
+  font-size: 23px;
+  /* font-family: 'Open Sans'; */
+  margin-top: 7px;
+  position: absolute;
+  top: 11%;
+  /* transform: translateY(-22%);*/
+}
+
+.category{
+  font-size: 23px;
+  /* font-family: 'Open Sans'; */
+  margin-top: 7px;
+  position: absolute;
+  top: 18%;
+}
+#type{
+  font-size: 23px;
+  /* font-family: 'Open Sans'; */
+  margin-top: 7px;
+  position: absolute;
+  top: 25%;
+}
+#price{
+  font-size: 23px;
+  /* font-family: 'Open Sans'; */
+  margin-top: 7px;
+  position: absolute;
+  top: 32%;
+}
+
+.lst_img-des{
+  margin-top: 1.5rem;
+  width: 50rem;
+  display: flex;
+  position: absolute;
+  top: 37%;
+}
+.lst_img-des img{
+width: 10rem;
+margin-right: 15px;
+border: 1px black solid;
+}
+.mo-ta{
+  font-size: 18px;
+  /* margin-top: 56px; */
+  width: 66%;
+  position: absolute;
+  top: 84.5%;
+}
+.add-cart{
+  position: absolute;
+    top: 75.5%;
+    height: 36px;
+    background: #53284f;
+    color: white;
+    border-radius: 5px;
+    font-family: 'open sans';
+    width: 7%;
+    cursor: pointer;
+}
+.name{
+  position: absolute;
+  top: 0.75%;
+}
