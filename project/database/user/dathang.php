@@ -58,38 +58,50 @@ if(isset($_POST['submit'])){
  
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<?php include 'header.html'; ?>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<style>
+    .form{
+        /* margin-top: 20px; */
+        width: 80%;
+        margin: 20px auto;
+    }
+    .submit{
+        background-color: #53284f;
+        color: whitesmoke;
+        border-radius: 3px;
+        width: 6rem;
+    }
+</style>
+
+    <div class="form">
     <form action="" method="post">
-        <div>
-            <label  for="">Tên</label>
-            <input type="text" name="name">
+ 
+    <div class="form-group">
+            <label  for="">Tên:</label>
+            <input class="form-control" type="text" name="name">
         </div>
-        <div>
-            <label for="">Số điện thoại</label>
-            <input type="text" name="phone">
+       
+        <div class="form-group">
+            <label for="">Số điện thoại:</label><br>
+            <input class="form-control" type="text" name="phone">
         </div>
-        <div>
-            <label for="">Địa chỉ</label>
-            <input type="text" name="address">
+        <div class="form-group">
+            <label for="">Địa chỉ:</label>
+            <input class="form-control" type="text" name="address">
         </div>
-        <div>
-            <label for="">Ghi chú</label>
-            <textarea name="ghichu" id="" cols="30" rows="10"></textarea>
+        <div class="form-group">
+            <label for="">Ghi chú:</label>
+            <textarea class="form-control"  name="ghichu" id="" cols="30" rows="10"></textarea>
         </div>
-        <input type="submit" value="Đặt hàng" name="submit">
+        <input class="submit" type="submit" value="Đặt hàng" name="submit">
         <?php 
          foreach($error as $key => $value){
               echo $value;
          }
         ?>
     </form>
-</body>
+    </div>
+
 </html>
