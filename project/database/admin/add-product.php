@@ -84,41 +84,43 @@ foreach($images as $key => $value){
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./add-product.css"/>
 </head>
 <body>
 <div class="container">
         <div class="row">
             <div class="col-12">
                 <form method="post" action=""  enctype="multipart/form-data">
-                    <h2>Thêm sản phẩm</h2>
-                    <a href="danhsachsanpham.php" class="btn btn-primary">Danh sách sản phẩm</a>
+                    <h2 class="add_pro">Thêm sản phẩm</h2>
+                    <a href="danhsachsanpham.php" class="list_pro btn btn-primary">Danh sách sản phẩm</a>
                     <div class="form-group">
                         <label for="">Tên sản phẩm</label>
                         <input name="name" type="text" class="form-control" id="ten" placeholder="Tên sản phẩm">
                     </div>
                     <div class="form-group">
-                        <label>Gía</label>
+                        <label>Giá</label>
                         <input name="price" type="text" class="form-control" />
                     </div>
                       
                        </div>                 
                     </select>
-                    <div class="form-group">
-                        <label>Thương hiệu</label>
-                        <select name="brand" id="">
+                    <label class="lb_brand">Thương hiệu</label>
+                    <div class="form-group sl_brand">
+                     
+                        <select class="form-control" name="brand" id="">
                         <option value="" class="disabled">___BRAND___</option>
                          <?php foreach($brand as $key => $value){ ?>
                          <option value="<?php echo $value['brandid'] ?>"><?php echo $value['namebrand'] ?></option>
                              <?php } ?>                   
             </select>
-            <button ><a href="add-brand.php" class="btn btn-primary" >ADD BRAND</a></button> 
+            <button><a href="add-brand.php" class="btn btn-primary add_brand" >Add brand</a></button> 
                          <!-- <button><a href="add-type.php" class="btn btn-primary"> Thêm kiểu dáng </a></button>        -->
                     </div>
                     <!-- <button ><a href="add-brand.php"class="btn btn-primary" > Thêm thương hiệu </a></button> -->
                     </div>
+                    <label>Kiểu dáng</label>
                     <div class="form-group">
-                        <label>Kiểu dáng</label>
-                        <select name="type" id="">
+                        <select class="form-control" name="type" id="">
                         <option value="" class="disabled">___TYPE___</option>
                          <?php foreach($type as $key => $value){ ?>
                          <option value="<?php echo $value['typeid'] ?>"><?php echo $value['nametype'] ?></option>
@@ -126,9 +128,10 @@ foreach($images as $key => $value){
             </select>
                          <!-- <button><a href="add-type.php" class="btn btn-primary"> Thêm kiểu dáng </a></button>        -->
                     </div>
+                    <label>Danh mục</label>
                     <div class="form-group">
-                        <label>Danh mục</label>
-                        <select name="category" id="">
+                
+                        <select class="form-control" name="category" id="">
                         <option value="" class="disabled">___CATEGORY___</option>
                         <?php foreach($category as $key => $value){ ?>
                         <option value="<?php echo $value['categoryid'] ?>"><?php echo $value['namecategory'] ?></option>
@@ -136,16 +139,19 @@ foreach($images as $key => $value){
                        </select>
                        <!-- <button><a href="add-category.php" class="btn btn-primary"> Thêm danh mục</a></button> -->
                     </div>
+                    <LABel>Ảnh</LABel>
                     <div class="form-group">
-                        <LABel>ẢNH</LABel>
-                    <input type="file" name ='image'>
+                  
+                    <input type="file" class="form-control-file" name ='image'>
+                    </div>
+                    <LABel>Ảnh mô tả</LABel>
+                    <div class="form-group">
+                       
+                    <input type="file" class="form-control-file" name = 'images[]' multiple="multiple">
                     </div>
                     <div class="form-group">
-                        <LABel>ẢNH MÔ TẢ</LABel>
-                    <input type="file" name = 'images[]' multiple="multiple">
-                    </div>
                     <label for="">Mô tả</label>
-                    <textarea name="mota" id="" cols="50" rows="1" required></textarea>
+                    <textarea class="form-control" name="mota" id="" cols="50" rows="3" required></textarea> </div>
                      <div class="form-group">
                         <input type="submit" value="Thêm sản phẩm" name="submit" class="btn btn-primary" />
                     </div>  

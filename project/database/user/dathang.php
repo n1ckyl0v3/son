@@ -24,8 +24,9 @@ if(isset($_POST['submit'])){
     if(empty($phone)){
         $error['phone'] = "Bạn chưa nhập số điện thoại";
     }
-    if(strlen($phone) < 10 || strlen($phone) >10){
-        $error['phonee'] = "Sai định dạng điện thoại";
+    preg_match("/^[0-9]{10}$/", $phone, $matchh);
+    if(!$matchh){
+        $error['phonee'] = "Phone khong hop le";
     }
     if(empty($address)){
         $error['address'] = "Bạn chưa nhập địa chỉ";

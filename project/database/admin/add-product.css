@@ -1,0 +1,29 @@
+.sl_brand{
+    display: flex;
+    padding-left:15px;
+    padding-right: 15px; 
+    width: 100%;
+}
+.add_brand{
+    font-size: 10px ;
+    height: 2rem;
+
+    padding: 0;
+}
+.lb_brand{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.container{
+    border: 1px solid rgb(146, 143, 143);
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgb(235, 240, 240);
+}
+.add_pro{
+    margin-bottom: 20px;
+}
+.list_pro{
+    margin-bottom: 20px;
+}

@@ -12,7 +12,7 @@ $userid = $object;
     <title>Document</title>
 </head>
 <body>
-    <h1 style="color: red">Đặt hàng thành công</h1>
+    <h1 style="font-size:30px">Quý khách đã đặt hàng thành công</h1>
     <h1 style="color: green"><a href="danhsachsanphamuser.php?userid=<?php echo $userid ?>">Tiêp tục mua hàng</a></h1>
 </body>
 </html>

@@ -5,7 +5,7 @@ $object = json_decode(json_encode($_SESSION['user']['id']), FALSE);
 
  $userid = $object;
  $cart = (isset($_SESSION['cart']))? $_SESSION['cart'] : [];
-var_dump($userid);
+// var_dump($userid);
  
  ?>
 
@@ -29,12 +29,12 @@ var_dump($userid);
                 <div class="d-flex justify-content-end mb-2">
                     
                 </div>
-                <table class="table table-responsive table-bordered">
+                <table style="width:900px ;" class="table table-responsive table-bordered">
                     <thead>
                         <th>STT</th>
                         <th>Ảnh </th>
                         <th>Tên sản phẩm</th>
-                        <th style="width: 500px">Số lượng</th>
+                        <th style="width:1500px ;">Số lượng</th>
                         <th>Gía</th>
                         <th>Thành tiền</th>
                         <th></th>
@@ -62,7 +62,7 @@ var_dump($userid);
                                         </td>
                                         <td><?php echo $value['price']; ?></td>      
                                         <td><?php echo number_format($subtotal=($value['price'] * $value['quantity'])) ?></td>
-                                        <td class="btn btn-warning"><a href="cart.php?id=<?php echo $value['id']?>&action=delete">XÓA</a></td>                 
+                                        <td class="btn btn-warning" style="margin: 10px" ><a style="color:whitesmoke;" href="cart.php?id=<?php echo $value['id']?>&action=delete">XÓA</a></td>                 
                                     </tr>
                                     
                                  <?php  $total += $subtotal;
@@ -76,15 +76,15 @@ var_dump($userid);
                                 ?>
                              <div>
                              <tr> <td colspan="6"> TỔNG TIỀN(VNĐ): <?php echo $total ?></td></tr>
-                             <button><a href="xoa-session.php">Xóa Giỏ Hàng</a></button>
-                             <Button><a href="danhsachsanphamuser.php?userid=<?php echo $userid ?>">Trang chủ</a></Button>
-                             <button><a href="dathang.php?userid=<?php echo $userid ?>">Mua hàng</a></button>
+                           
                             
                     </tbody>
                     
                 </table>
                 
-                
+                             <button style="background-color: #53284f;"><a style="color:white " href="xoa-session.php">Xóa Giỏ Hàng</a></button>
+                             <Button style="background-color: #53284f;"><a style="color:white "  href="danhsachsanphamuser.php?userid=<?php echo $userid ?>">Trang chủ</a></Button>
+                             <button style="background-color: #53284f;"><a style="color:white "  href="dathang.php?userid=<?php echo $userid ?>">Mua hàng</a></button>
             </div>
         </div>
     </div>

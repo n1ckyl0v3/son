@@ -129,17 +129,17 @@ $object = json_decode(json_encode($_SESSION['user']['id']), FALSE);
             </form>
         </div>
         </div>  
-        <ul class="pagination">
+        <ul class="pagination" style="display: flex; flex-wrap: wrap; justify-content: center;">
                 <?php if($cr_page -1 > 0){  ?>
   <li class="page-item"><a class="page-link" href="danhsachsanphamuser.php?page=<?php echo $cr_page -1 ?>&&userid=<?php echo $userid ?>">Previous</a></li>
   <?php } ?>
  <?php for($i = 1;$i <=  $page; $i++ ){ ?>
-  <li style="border: none; margin: 20px auto"  class=" <?php echo  ($cr_page == $i)? 'active' : '' ?>" ><a style="background:#53284f; border:none; " class="page-link" href="danhsachsanphamuser.php?page=<?php echo $i ?>&&userid=<?php echo $userid ?>"> <?php echo $i ?></a></li>
+  <li style="border: none; margin: 10px 3px 3px 3px; "  class=" <?php echo  ($cr_page == $i)? 'active' : '' ?>" ><a style="background:#53284f; border:none; color:whitesmoke; " class="page-link" href="danhsachsanphamuser.php?page=<?php echo $i ?>&&userid=<?php echo $userid ?>"> <?php echo $i ?></a></li>
   <?php } ?>
   
   <?php if($cr_page + 1 <= $page){   ?>
     
-  <li class="page-item"><a class="page-link" href="danhsachsanphamuser.php?page=<?php echo $cr_page +1 ?>&&userid=<?php echo $userid ?>">Next</a></li>
+  <li class="page-item" style="margin: 10px 3px 3px 3px;"><a style="background:#53284f; border:none; color:whitesmoke; border-radius:0px; "  class="page-link" href="danhsachsanphamuser.php?page=<?php echo $cr_page +1 ?>&&userid=<?php echo $userid ?>">Next</a></li>
   <?php } ?>
 </ul>
         <button class="but1"><a class="buyed" href="sanphamdamua.php?userid=<?php echo $userid ?>">Sản phẩm đã mua</a></button>
